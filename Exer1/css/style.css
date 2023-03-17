@@ -1,0 +1,20 @@
+header{
+    width: 100%;
+    font-weight: larger;
+    background-color: lightblue;
+}
+
+img.estilo {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.estilo > li {
+    display: inline;
+}
+.estilo > li a:visited{
+    color: rgb(4, 54, 38);
+}
+.estilo > li a:hover{
+    color: brown;
+}
