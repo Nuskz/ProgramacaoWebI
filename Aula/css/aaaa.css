@@ -1,0 +1,93 @@
+.estilo {
+    width: 50vw;
+    height: 200px;
+    color: rgb(10, 133, 92);
+    position: relative;
+
+}
+
+nav {
+    background-color: cornflowerblue;
+    padding: 10px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    background-color: goldenrod;
+}
+
+nav a {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav li {
+    list-style: none;
+}
+
+.menuPrincipal>li {
+    display: inline-block;
+    padding-right: 15px;
+}
+
+.menuPrincipal>li:hover .subMenu {
+    display: block;
+}
+
+.subMenu {
+    position: fixed;
+    display: none;
+    background-color: lightblue;
+
+}
+
+.subMenu li {
+    padding-bottom: 5px;
+}
+.exemploFlex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: brown;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 400px;
+
+}
+
+.exemploFlex  div{
+    font-size: 2em;
+    background-color:lightcoral;
+    padding: 20px;
+    margin: 10px;
+}
+
+.exemploGrid {
+    /*display: grid;
+    grid-template-columns: auto auto auto;
+    row-gap: 10px;
+    grid-template: auto /auto auto;
+    grid-template-rows: 50px;
+    */
+    column-gap: 10px; 
+    background-color: rgb(8, 109, 62);
+}
+.exemploGrid div {
+    font-size: 2em;
+    border: 1px solid black;
+    background-color:rgb(165, 74, 74);
+    padding: 20px;
+    margin: 0px;
+    
+}
+
+header {
+    position: sticky;
+    border: 1px solid black;
+    background-color: aquamarine;
+    top: 0px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 3em;
+}
