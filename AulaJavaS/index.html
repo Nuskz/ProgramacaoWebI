@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styleA.css">
+    <title>Exemplo JavaScript</title>
+    <script src="./js/scripts.js"></script>
+    <style>
+        .class1 {
+            background-color: blue;
+            font-size: 1.5em;
+        }
+
+        .class2 {
+            color: goldenrod;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .class3 {
+            border: 1px solid black;
+        }
+
+        .class4 {
+            display: none;
+        }
+    </style>
+    <script>
+        let x = 5;
+        const y = 7;
+        console.log('x + y = ' + (x + y));
+        console.log('x + y = ' + x + y);
+        x = 'Marcos';
+        console.log('x + y = ' + (x + y));
+        //y = 8;
+
+        x = 7;
+        if (x == y) {
+            console.log('X e Y são iguais')
+        } else {
+            console.log('X e Y são diferentes')
+        }
+
+        x = '7';
+        if (x == y) {
+            console.log('X e Y são valores iguais')
+        } else {
+            console.log('X e Y são valores diferentes')
+        }
+        if (x === y) {
+            console.log('X e Y são valores e tipos iguais')
+        } else {
+            console.log('X e Y são valores ou tipos diferentes')
+        }
+
+        /*
+        ==         !==
+        ===        !===
+        
+        >          <
+        >=         <=
+        
+        AND - &&
+        OR  - ||
+        NOT - !
+        */
+
+        var a = 5;
+        a++;
+        console.log(a);
+        a--;
+        console.log(a);
+        a = a * 2;
+        console.log(a);
+        a = a / 2;
+        console.log(a);
+        a *= 2;
+        console.log(a);
+        a /= 2;
+        console.log(a);
+
+        function mostraMsg() {
+            alert('É um corno manso mesmo!');
+        }
+
+        function alteraButton() {
+            document.getElementById('button1').innerHTML = 'Novo caption';
+        }
+
+        var nrParagrafo = 1;
+        function criaParagrafo() {
+            const novoParagrafo = document.createElement('p');
+            novoParagrafo.innerHTML = 'Novo Paragrafo ' + nrParagrafo;
+            novoParagrafo.classList.add('class1')
+            document.getElementById('div3').appendChild(novoParagrafo);
+            nrParagrafo++;
+        }
+
+        function removeParagrafo() {
+            document.getElementById('div3').removeChild(
+                document.getElementById('div3').lastChild
+            );
+            nrParagrafo--;
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/rwgnU_B6Ixg" title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+    <main>
+        <button onclick="alert('Corno!')" id="button1">Clique Aqui!</button><br>
+        <div onclick="mostraMsg()">Clique Aqui também!</div>
+        <a href="#" onclick="mostraMsg2('Além de corno ainda é teimoso')">Não Clique aqui!</a><br>
+        <button onclick="alteraButton()">Altera button acima!</button>
+        <div id="div1" class="class1">Texto da div.</div>
+        <button onclick="document.getElementById('div1').classList.add('class2') ">Adiciona Estilo</button>
+        <button onclick="document.getElementById('div1').classList.remove('class1') ">Remove Estilo</button>
+        <button onclick="document.getElementById('div1').classList.toggle('class3')">Toggle</button>
+        <script>
+            document.getElementById('div1').innerHTML = 'Novo conteúdo da div'
+        </script>
+        <div id="div2">Novo div da pagina</div><br>
+        <button
+            onclick="document.getElementById('div2').style.display='none'; document.getElementById('mostra1').style.display= 'block'">Esconde
+            div acima</button>
+        <button id="mostra1" style="display: none;"
+            onclick="document.getElementById('div2').style.display='block'; document.getElementById('mostra1').style.display= 'none'">Mostra
+            div acima</button>
+        <button onclick="criaParagrafo()">Cria Paragrafo</button>
+        <button onclick="removeParagrafo()">Remove Paragrafo</button>
+        <div id="div3"></div>
+
+    </main>
+</body>
+
+</html>
