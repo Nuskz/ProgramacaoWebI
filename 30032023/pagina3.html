@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página 3</title>
+    <style>
+        /* Comentário */
+        td, th {
+            border: 1px solid black;
+            padding: 5px;
+        }
+        th {
+            background-color: aquamarine;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        tfoot {
+            font-weight: bold;
+            color: blue;
+        }
+        tbody {
+            background-color: bisque;
+        }
+    </style>
+</head>
+<body>
+    <p><a href="pagina2.html">Página 2</a></p>
+    <p><a href="pagina4.html">Página 4</a></p>
+    <div>
+        <table style="border: 1px solid black; border-collapse: collapse;">
+            <tr>
+                <td>Info 1</td>
+                <td>Info 2</td>
+                <td>Info 3</td>
+            </tr>
+            <tr>
+                <td>Info 4</td>
+                <td>Info 5</td>
+                <td>Info 6</td>
+            </tr>
+            <tr>
+                <td>Info 7</td>
+                <td>Info 8</td>
+                <td>Info 9</td>
+            </tr>
+        </table>
+        <table>
+            <thead>
+                <tr>
+                    <th>Col1</th>
+                    <th>Col2</th>
+                </tr>    
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Nova info 1</td>
+                    <td>Nova info 2</td>
+                </tr>
+                <tr>
+                    <td>Nova info 3</td>
+                    <td>Nova info 4</td>
+                </tr>                    
+            </tbody>
+        </table>
+        <table>
+            <tbody>
+                <tr>
+                    <td>Marcos</td>
+                    <td>Blumenau</td>
+                    <td>R$ 100.000,00</td>
+                </tr>
+                <tr>
+                    <td>Cardoso</td>
+                    <td>Itajaí</td>
+                    <td>R$ 80.000,00</td>
+                </tr>    
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2">Total</td>
+                    <td>R$ 180.000,00</td>
+                </tr>    
+            </tfoot>
+        </table>
+        <table>
+            <tr>
+                <td rowspan="2">2020</td>
+                <td>Blumenau</td>
+                <td>5.000</td>
+            </tr>
+            <tr>
+                <td>Itajaí</td>
+                <td>6.500</td>
+            </tr>
+            <tr>
+                <td rowspan="2">2021</td>
+                <td>Blumenau</td>
+                <td>6.000</td>
+            </tr>
+            <tr>
+                <td>Itajaí</td>
+                <td>6.200</td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <audio controls>
+            <source src="media/file_example_MP3_700KB.mp3" type="audio/mpeg">
+        </audio><br>
+        <iframe width="300" height="200"
+         src="https://www.youtube.com/embed/xQLBx1seX2g"
+          title="YouTube video player" frameborder="0"
+           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+        </iframe>
+    </div>
+</body>
+</html>

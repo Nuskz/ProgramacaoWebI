@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styleA.css">
+    <title>Pagina 2</title>
+</head>
+<body>
+    <main>
+        <a href="index.html">Pagina principal</a>
+        <div id="mensagem"></div>
+        <button onclick="retornaNome()">retorna nome</button>
+        <button onclick="retornaJSON()">retorna JSON</button>
+    </main>
+</body>
+<script>
+    document.getElementById('mensagem').innerHTML = document.cookie;
+
+    function retornaNome(){
+        document.getElementById('mensagem').innerHTML = localStorage.getItem('nome');
+    }
+    function retornaJSON(){
+        var pessoa = JSON.parse(localStorage.getItem("pessoa"));
+        console.log(pessoa);
+        document.getElementById('mensagem').innerHTML = pessoa.nome+ " - " + pessoa.idade;
+    }
+</script>
+</html>

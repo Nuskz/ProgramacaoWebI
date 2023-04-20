@@ -1,0 +1,270 @@
+body {
+    margin: 0px;
+}
+
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+td {
+    border: 1px solid black;
+    padding: 8px;
+}
+
+img {
+    width: 100%;
+}
+
+.estilo {
+    width: 50vw;
+}
+
+p.estilo {
+    background-color: burlywood;
+}
+
+#topo {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.menu > li {
+    display: inline-block;
+}
+
+.botao a:link, .botao a:visited {
+    text-decoration: none;
+    font-weight: bold;
+    background-color: rgb(74, 114, 35);
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 5px;
+    border-radius: 50px;
+}
+
+.botao a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+.botao a:active {
+    color: black;
+}
+
+.tabela tr:nth-child(odd) {
+    background-color: lightgrey;
+}
+
+.tabela tr:hover {
+    background-color: aqua;
+}
+
+.tabela tr:active {
+    font-weight: bold;
+}
+
+.lista {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.lista li:last-child {
+    font-weight: bold;
+    color: brown;
+}
+
+.lista li:first-child {
+    color: red;
+}
+
+.lista li:nth-child(3) {
+    color: green;
+    font-weight: bold;
+}
+
+div {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+input {
+    background-color: yellow;
+    border-width: 0px;
+    border-bottom-width: 1px;
+    border-radius: 25px;
+}
+
+input[type="password"],[type="number"] {
+    background-color: red;
+}
+
+input:focus {
+    background-color: lightblue;
+}
+
+.animacao2 {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    animation: movimento 10s infinite;
+}
+
+@keyframes movimento {
+    0% { background-color: red; top: 0px; left: 0px;}
+    25% { background-color: yellow; top: 0px; left: 100px;}
+    50% { background-color: green; top: 100px; left: 100px;}
+    75% { background-color: blue; top: 100px; left: 0px;}
+    100% { background-color: red; top: 0px; left: 0px;}
+}
+
+.animacao {
+    width: 50vw;
+    height: 200px;
+    background-color: red;
+}
+
+.animacao:hover {
+    animation: corAnimacao 10s infinite;
+}
+
+@keyframes corAnimacao {
+/*    from { background-color: red;}
+    to { background-color: blue;}*/
+    0% { background-color: red;}
+    25% {background-color: yellow;}
+    50% {background-color: green;}
+    75% { background-color: blue;}
+    100% { background-color: red;}
+}
+header {
+    position: sticky;
+    border: 1px solid black;
+    background-color: aquamarine;
+    top: 0px;
+    font-family: 'Alkatra', cursive;
+    font-size: 3em;
+}
+
+@font-face {
+    font-family: 'MinhaFonte';
+    src: url(../fonts/DeliciousHandrawn-Regular.ttf);
+}
+
+footer {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 100vw;
+    border: 1px solid black;
+    background-color: aquamarine;
+    font-family: 'MinhaFonte';
+    font-size: 3em;
+}
+
+nav {
+    background-color: blue;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    background-color: darkgray;
+}
+
+nav li {
+    list-style: none;
+}
+
+.menuPrincipal > li {
+    display: inline-block;
+    padding-right: 15px;
+}
+
+.subMenu {
+    /*display: none;*/
+    visibility: hidden;
+    background-color: lightblue;
+    position: fixed;
+}
+
+.subMenu li {
+    padding-bottom: 5px;
+}
+
+.menuPrincipal > li:hover .subMenu {
+    /*display: block;*/
+    visibility: visible;
+}
+
+.exemploFlex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: blue;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+.exemploFlex div {
+    background-color: lightblue;
+    font-size: 2em;
+    padding: 20px;
+    margin: 10px;
+    height: 40px;
+}
+
+@media screen and (min-width: 400px) {
+    .exemploGrid {
+        display: grid;
+        /*grid-template-columns: auto auto auto;*/
+        /*grid-template-rows: 50px;*/
+        /*row-gap: 10px;*/
+        /*column-gap: 10px;*/
+        gap: 10px;
+        grid-template: auto / auto auto auto;
+        background-color: blue;
+    }
+    .menuHorizontal {
+        display: block;
+    }
+    .menuHamburguer {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .exemploGrid {
+        display: grid;
+        /*grid-template-columns: auto auto auto;*/
+        /*grid-template-rows: 50px;*/
+        /*row-gap: 10px;*/
+        /*column-gap: 10px;*/
+        gap: 5px;
+        grid-template: auto / auto auto;
+        background-color: green;
+    }
+    .menuHamburguer {
+        display: block;
+        background-color: green;
+    }
+    .menuHorizontal {
+        display: none;
+    }
+}
+
+.exemploGrid div {
+    background-color: lightblue;
+    font-size: 2em;
+    border: 1px solid black;
+    padding: 20px;
+    margin: 0px;
+    text-align: center;
+}

@@ -105,15 +105,46 @@
             nrParagrafo--;
         }
 
+        function armazenaCookie() {
+            document.cookie = "login=" +
+                document.getElementById('login').value;
+            document.cookie = "outroCookie=outro valor";
+            alert('cookie armazenado!');
+        }
+
+        function armazenaStorage1() {
+            localStorage.setItem("nome", document.getElementById('nome').value);
+            localStorage.setItem("idade", document.getElementById('idade').value);
+            alert("valores armazenados");
+        }
+
+        function armazenaStorage2() {
+            localStorage.setItem("pessoa",
+                '{ "nome" : "' +
+                document.getElementById('nome').value + '",'+
+                ' "idade" : "'+ 
+                document.getElementById('idade').value + '" }'
+            );
+        }
+
+        function armazenaStorage3(){
+            var nome = document.getElementById('nome').value;
+            var idade = document.getElementById('idade').value;
+            localStorage.setItem("pessoas",
+                "["+
+                    "{\"codigo\" : 1, \"nome\" : \""+nome+"\", \"idade\" : \""+idade+"\"}," +
+                    "{\"codigo\" : 2, \"nome\" : \""+nome+"\", \"idade\" : \""+idade+"\"}"
+                
+                +"]"
+            )
+        }
+
+
     </script>
 
 </head>
 
 <body>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/rwgnU_B6Ixg" title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen></iframe>
     <main>
         <button onclick="alert('Corno!')" id="button1">Clique Aqui!</button><br>
         <div onclick="mostraMsg()">Clique Aqui também!</div>
@@ -137,6 +168,18 @@
         <button onclick="removeParagrafo()">Remove Paragrafo</button>
         <div id="div3"></div>
 
+        <div>
+            <input id="login" type="text">
+            <button onclick="armazenaCookie()">Armazena cookie</button><br>
+            <a href="pagina2.html">Pagina 2</a>
+        </div>
+        <div>
+            <input type="text" name="nome" id="nome">
+            <input type="text" name="idade" id="idade"><br>
+            <button onclick="armazenaStorage1()">armazena storage forma 1</button>
+            <button onclick="armazenaStorage2()">Armazena storage forma 2</button>
+            <button onclick="armazenaStorage3()">Armazena storage forma 3</button>
+        </div>
     </main>
 </body>
 

@@ -1,0 +1,50 @@
+body {
+  font-family: "Courier New", Courier, monospace;
+}
+
+header {
+  background-color: green;
+  color: white;
+}
+
+footer {
+  background-color: green;
+  color: white;
+}
+
+nav {
+  background-color: blue;
+  padding: 10px;
+}
+nav a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+nav a:hover {
+  text-decoration: underline;
+  background-color: darkgray;
+}
+nav li {
+  list-style: none;
+}
+
+.botaoPadrao, .botaoOk, .botaoPerigo, .botaoDefault {
+  border-radius: 25px;
+  padding: 15px;
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.botaoDefault {
+  background-color: blue;
+}
+
+.botaoPerigo {
+  background-color: red;
+}
+
+.botaoOk {
+  background-color: green;
+}/*# sourceMappingURL=testeSass.css.map */
