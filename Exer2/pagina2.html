@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 2.2</title>
+</head>
+<script>
+    function fazEspelho(){
+        document.getElementById('espelho').innerHTML = document.getElementById('textoExe2').value
+    }
+
+    function mostraQuantidade(){
+        let tamanho = parseInt(document.getElementById('textoExe2'))
+        document.getElementById('tamanhoMensagem').innerHTML = "O tamanho atual do campo é de " + tamanho
+    }
+</script>
+<body>
+    <div>
+        <input id="textoExe2" onkeyup="fazEspelho()" type="text">
+        <button onclick="mostraQuantidade()">Mostra Quantidade</button><br>
+        <div id="espelho"></div>
+        <div id="tamanhoMensagem"></div>
+    </div>
+</body>
+</html>

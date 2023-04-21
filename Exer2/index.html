@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styleExe2.css">
+    <title>Exercicio 2.1</title>
+</head>
+<script>
+    function somaElementos(){
+    var numero1 = parseFloat(document.getElementById('number1').value);
+    var numero2 = parseFloat(document.getElementById('number2').value);
+    var soma = numero1 + numero2
+
+    if(numero1 > numero2){
+        document.getElementById('resultadoSoma').style.backgroundColor='red'
+    } else if(numero1 == numero2){
+        document.getElementById('resultadoSoma').style.backgroundColor='yellow'
+    } else if (numero1 < numero2){
+        document.getElementById('resultadoSoma').style.backgroundColor='green'
+        
+    }
+    document.getElementById('resultadoSoma').innerHTML = "O resultado é " + (soma)
+}
+</script>
+<body>
+    <div>
+        Letra 1 <br>
+        <input id="number1" type="number">
+        <input id="number2" type="number">
+        <button onclick="somaElementos()">soma</button>
+        <div id="resultadoSoma" class=""></div>
+    </div>
+    <a href="pagina2.html">proxima letra</a>
+</body>
+</html>
