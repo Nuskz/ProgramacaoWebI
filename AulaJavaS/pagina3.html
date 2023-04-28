@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina 3</title>
+</head>
+
+<body>
+    <a href="/pagina2.html">pagina 2</a>
+    <div id="hora"></div>
+    <div>
+        <button onclick="funcao1()">Chama Função 1</button>
+        <button onclick="x()">Chama Função X</button><br>
+        <button onclick="chamaCallBack(funcao1)">Chama Call Back 1</button>
+        <button onclick="chamaCallBack(x)">Chama Call Back 2</button><br>
+        <button onclick="chamaCallBack(y,5)">Chama Call Back 3</button>
+        <button onclick="chamaCallBack(y,'Marcos')">Chama Call Back 4</button><br>
+        <button onclick="mostraVetor()">Mostra vetor</button>
+
+    </div>
+</body>
+<script>
+    //setInterval(mostraHora,1000);
+    setInterval(
+        () => {
+            var vHora = new Date()
+            document.getElementById('hora').innerHTML = vHora.getHours() +
+                ':' + vHora.getMinutes() + ':'
+                + vHora.getSeconds()
+        }
+        ,
+        1000)
+
+
+
+    function mostraHora() {
+        var vHora = new Date();
+        document.getElementById('hora').innerHTML = vHora.getHours() + ':' + vHora.getMinutes() + ':' + vHora.getSeconds();
+    }
+
+    function funcao1() {
+        console.log('Chamou funcao1()')
+    }
+    /*
+        var x = function(){
+            console.log('chamou funcao X()')
+        }
+    */
+    /*    var x = () => {
+            console.log('chamou funcao x')
+        }
+    */
+    var x = () => console.log('chamou funcaoX')
+    var y = (parametro) => console.log('chamou funcao Y com parametro ' + parametro)
+
+    function chamaCallBack(pFuncao, parametro) {
+        pFuncao(parametro);
+    }
+
+    function mostraVetor(){
+        var vetor = ['mesa','caneta','quadro','carro']
+        console.log(vetor)
+        vetor.forEach(
+            (pValor, pInd) => {
+                console.log("Posição[" + pInd +"]"+
+                " => " + pValor)
+            }
+        )
+    }
+</script>
+
+</html>
