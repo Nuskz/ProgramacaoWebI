@@ -1,0 +1,6 @@
+.teste{
+    display: flex;
+    justify-items: center;
+    justify-content: space-between;
+    align-items: center;
+}
