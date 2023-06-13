@@ -1,6 +1,6 @@
-.teste{
-    display: flex;
-    justify-items: center;
-    justify-content: space-between;
+.cardFuncionario{
+    width: 250px;
     align-items: center;
+    background-color: black;
+    padding: 10px;
 }

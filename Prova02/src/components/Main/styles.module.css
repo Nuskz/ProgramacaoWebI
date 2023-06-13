@@ -1,3 +1,79 @@
-.teste{
-    color: red;
+.body{
+    background-color: #182736;
+    height: 90vh;
+    display: flex;
+    justify-content: space-between;
+   
+}
+.menuEsquerda {
+    padding:15px;
+    width: 10%;
+    bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+    transition: 200ms;
+    height:100%;
+    background-color: #1e568f;
+}
+
+.menuEsquerda:hover{
+    width: 12%;
+}
+
+.btn-logout {
+    display: none;
+}
+
+.menuEsquerda > button {
+    text-transform: uppercase;
+    font-size: 12px;
+    padding: 15px;
+    width: 100%;
+    height: 54px;
+    transition: 100ms;
+    background-color: aliceblue;
+    color: #1e568f;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 8px 10px #3a5570;
+}
+
+.menuEsquerda > button:hover {
+    background-color: #eeeeee;
+}
+
+.conteudoPrincipal { 
+    height: 100%;
+    padding: 15px;
+    text-align: center;
+    color: #eeeeee;
+}
+
+.conteudoFuncionarios{
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media(max-width: 700px){
+    .menuEsquerda:hover{
+        width: 100vw;
+        height: 20vh;
+    }
+    .body{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .menuEsquerda {
+        top: 81px;
+        background-color: #1e568f;
+        width: 100vw;
+        height: 20vh;
+        display: flex;
+        box-shadow: 0 4px 10px #1717187e;
+        }
 }

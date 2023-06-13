@@ -1,0 +1,13 @@
+footer {
+    padding: 10px;
+    position: fixed;
+    width: 100vw;
+    background-color: #1b2e41;
+    color: aliceblue;
+    text-align: center;
+    bottom: 0px;
+}
+
+ul, li {
+    list-style: none;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styleLogin.css">
+    <script src="./js/scriptPrincipal.js"></script>
+    <title>Login</title>
+  </head>
+  <body>
+    <header class="cabecalho">
+        <div class="logo-principal">
+            <img onclick="voltaPaginaPrincipal()" src="./img/LogoPrincipal.jpg" alt="LogoViagra">
+        </div>
+        <div class="logo-usuario">
+            <span id="nome-usuario">Usuario não autenticado</span>
+            <img src="./img/usuario icone.png" alt="iconeUsuarioGenerico" >
+        </div>
+    </header>
+    <main>
+      <form class="main-login">
+            <div class="card-login">
+                <h1>LOGIN</h1>
+                <div class="textfield">
+                    <label for="usuario">Usuário</label>
+                    <input id="inp-usuario" type="text" name="usuario" placeholder="Usuário">
+                </div>
+                <div class="textfield">
+                    <label for="senha">Senha</label>
+                    <input id="inp-senha" type="password" name="senha" placeholder="Senha">
+                </div>
+                <button class="btn-login" onclick="fazerLogin(event)">Login</button>
+            </div>
+      </form>
+    </main>
+  </body>
+</html>

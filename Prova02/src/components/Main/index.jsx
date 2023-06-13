@@ -1,25 +1,31 @@
 import { Card } from "../Cards"
+
+import { Funcionarios } from "../Funcionarios"
 import styles from "./styles.module.css"
 
 export function Main() {
-const cards = [
-    {price: "12,00", description: "lorem ipsum", title:"viagra"},
-    {price: "13,00", description: "lorem ipsum", title:"viagra"},
-    {price: "14,00", description: "lorem ipsum", title:"viagra"},
-    {price: "15,00", description: "lorem ipsum", title:"viagra"},
-]
+
+
+
+    function irParaHome(){
+        
+    }
+    function irParaFuncionarios(){
+        
+    }
     return (
-        <div>
-            <h1 className={styles.teste}>Viagra</h1>
-           {
-            cards.map((item) => (
-                <Card price={item.price} description={item.description} title={item.title} />
-            ))
-           }
-           
-           
-        </div>   
+            <main className={styles.body}>
+                <div className={styles.menuEsquerda}>
+                    <button onclick={irParaHome}>Home</button>
+                    <button onClick={irParaFuncionarios}>Funcionários</button>
+                </div>
+                <div  className={styles.conteudoPrincipal}>
+                    <h1>
+                        Está é uma aplicação utilizando Vite + React, onde peguei como base o meu codígo da primeira avaliação
+                    </h1>
+                </div>
+                
+            </main>
     )
-  }
-  
-  
+}
+

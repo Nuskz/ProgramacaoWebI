@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordle</title>
+</head>
+<style>
+    table{
+        margin-left: 10px;
+    }
+
+    input{
+        width: 16em;
+    }
+</style>
+<script>
+    function testaPalavra(palavra){
+        if(palavra.length == 5){
+
+        } else {
+            alert('A palavra deve conter 5 letras')
+        }
+    }
+
+</script>
+<body>
+    <table>
+        <input id="palavra" type="text">
+        <button onclick="testaPalavra(document.getElementById('palavra').value)">Inserir</button>
+        <tr></tr>
+    </table>
+    
+</body>
+</html>

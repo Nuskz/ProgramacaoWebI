@@ -1,0 +1,121 @@
+body {
+    background-color: #182736;
+    margin: 0;
+}
+
+body * {
+    font-family: sans-serif,Tahoma, Verdana, Arial;
+    box-sizing: border-box;
+}
+
+.cabecalho {
+    color: aliceblue;
+    top: 0px;
+    background-color: #3a5570;
+    width: 100vw;
+    height: 80px;
+    display: flex;
+    position: fixed;
+    box-shadow: 0 4px 10px #1717187e;
+}
+.logo-principal {
+    width: 100%;
+    text-align: left;
+    padding: 4px;
+}
+.logo-principal > img {
+    cursor: pointer;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.logo-usuario {
+    width: 100%;
+    text-align: right;
+    padding: 4px;
+}
+
+.logo-usuario  img {
+    cursor: pointer;
+    height: 100%;
+}
+.main-login{
+    margin-top: 100px;
+    justify-content: center;
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    text-align: center;
+}
+
+.card-login {
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 40px;
+    transition: 200ms;
+    height: 50%;
+    margin-top: 16px;
+    background-color: #3a5570;
+    box-shadow: 0px 10px 10px #222222c2;
+}
+
+.card-login:hover {
+    height: 51%;
+}
+
+.card-login > h1 {
+    color: aliceblue;
+    font-weight: 800;
+}
+
+.textfield {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px;
+}
+
+.textfield > input {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: aliceblue;
+    font-size: 12pt;
+    outline: none;
+    box-sizing: border-box;
+    box-shadow: 0px 5px 4px #306ba5;
+}
+
+.textfield > label {
+    color: aliceblue;
+    margin-bottom: 10px;
+}
+
+.textfield > input::placeholder {
+    color: #3a5570;
+}
+
+.btn-login {
+    text-transform: uppercase;
+    transition: 100ms;
+    width: 100%;
+    padding: 16px;
+    margin: 25px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 800;
+    color: #3a5570;
+}
+
+.btn-login:hover {
+    background-color: #cacaca ;
+}
+
+/* @media (wid)
+*/

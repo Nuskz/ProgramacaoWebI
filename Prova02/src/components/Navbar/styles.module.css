@@ -1,0 +1,29 @@
+.cabecalho {
+    color: aliceblue;
+    background-color: #3a5570;
+    height: 80px;
+    display: flex;
+    box-shadow: 0 4px 10px #1717187e;
+}
+.logoPrincipal {
+    width: 100%;
+    text-align: left;
+    padding: 4px;
+}
+.logoPrincipal > img {
+    cursor: pointer;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.logoUsuario {
+    width: 100%;
+    text-align: right;
+    padding: 4px;
+}
+
+.logoUsuario  img {
+    cursor: pointer;
+    height: 100%;
+}
+

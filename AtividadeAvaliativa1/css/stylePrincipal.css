@@ -1,0 +1,138 @@
+body {
+    background-color: #182736;
+    margin: 0;
+}
+
+body * {
+    font-family: Papyrus, 'Comic Sans', sans-serif,Tahoma, Verdana, Arial;
+    box-sizing: border-box;
+}
+
+ul {
+    padding: 0;
+    margin: 8px;
+}
+
+li {
+    list-style: none;
+}
+
+footer {
+    background-color: #1b2e41;
+    color: aliceblue;
+    width: 100%;
+    position: fixed;
+    text-align: center;
+    bottom: 0px;
+}
+.cabecalho {
+    color: aliceblue;
+    top: 0px;
+    background-color: #3a5570;
+    width: 100vw;
+    height: 80px;
+    display: flex;
+    position: fixed;
+    box-shadow: 0 4px 10px #1717187e;
+}
+.logo-principal {
+    width: 100%;
+    text-align: left;
+    padding: 4px;
+}
+.logo-principal > img {
+    cursor: pointer;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.logo-usuario {
+    width: 100%;
+    text-align: right;
+    padding: 4px;
+}
+
+.logo-usuario  img {
+    cursor: pointer;
+    height: 100%;
+}
+
+.menu-cima {
+    display: none;
+    width: 100%;
+    height: 48px;
+    background-color: #1e568f;
+}
+
+.menu-esquerda {
+    padding:12px 4px;
+    width: 100px;
+    bottom: 0px;
+    text-align: center;
+    position: fixed;
+    transition: 200ms;
+    height: calc(100vh - 80px);
+    background-color: #1e568f;
+}
+
+.btn-logout {
+    display: none;
+}
+
+.menu-esquerda > button {
+    text-transform: uppercase;
+    margin: 4px;
+    width: 98%;
+    height: 54px;
+    transition: 100ms;
+    background-color: aliceblue;
+    color: #1e568f;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 8px 10px #3a5570;
+}
+
+.menu-esquerda > button:hover {
+    background-color: #eeeeee;
+}
+
+.conteudo-principal { 
+    padding: 24px;
+    width: calc(100vw - 100px);
+    margin-top: 80px;
+    margin-left: 100px;
+    text-align: center;
+}
+
+.conteudo-principal  img {
+    max-width: 72vw;
+}
+
+@media(min-width: 701px) {
+    .menu-esquerda:hover{
+        width: 260px;
+    }
+}
+
+@media(max-width: 700px){
+    .conteudo-principal {
+        margin-top: 160px !important;
+        width: 100vw !important;
+        margin-left: 0 !important;
+    }
+    .conteudo-principal img {
+        max-width: 100% !important;
+    }
+    .menu-esquerda {
+    top: 81px;
+    background-color: #1e568f;
+    width: 100vw;
+    height: 80px;
+    display: flex;
+    position: fixed;
+    box-shadow: 0 4px 10px #1717187e;
+    }
+}
+
+
